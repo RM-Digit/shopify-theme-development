@@ -1,0 +1,165 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+  <!-- ======================= Pipeline Theme V3.1 ========================= -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {% if settings.favicon != blank %}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {% endif %}
+
+  <!-- Title and description ================================================ -->
+  <title>
+  {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <!-- Product meta ========================================================= -->
+  {% include 'social-meta-tags' %}
+
+  <!-- Helpers ============================================================== -->
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_primary }}">
+
+  <!-- CSS ================================================================== -->
+  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+
+  <!-- Modernizr ============================================================ -->
+  {{ 'modernizr.min.js' | asset_url | script_tag }}
+
+  <!-- jQuery v2.2.3 ======================================================== -->
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+
+  {% include 'oldIE-js' %}
+
+  <script>
+    var theme = {
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }}
+      },
+      moneyFormat: {{ shop.money_format | json }}
+    }
+  </script>
+
+  {% comment %}
+    If you store has customer accounts disabled, you can remove the following JS file
+  {% endcomment %}
+  {% if template contains 'customers' %}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  {% include 'fonts' %}
+
+  <!-- Header hook for plugins ============================================== -->
+  {{ content_for_header }}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BeginWishyAddon --><script>  Shopify.wishy_btn_settings = {"button_setting":"","btn_append":"before","btn_display":"block","btn_width":"auto","btn_margin_top":5,"btn_margin_left":5,"btn_margin_right":5,"btn_margin_bottom":5,"btn_margin_unit":"px","btn_placer_element":null,"btn_background_color":"#ffffff","btn_border_color":"#b9b9b9","btn_border_width":1,"btn_text":"♡ Add to wishlist","btn_color":"#1b1b1b","remove_btn_background_color":"#5c6ac4","remove_btn_border_color":"#3f4eae","remove_btn_border_width":1,"remove_btn_color":"#ffffff","new_theme_published_at":null,"installed":true,"heart_icon_margin_right":15,"heart_icon_margin_bottom":15,"heart_icon_location":"bottom-right","heart_icon_margin_top":15,"heart_icon_margin_left":15,"setting_force_login":true,"heart_icon_url_match":"","heart_icon_enabled":false,"status":"alive","spf_record":null,"floating_favorites_enabled":false,"floating_favorites_location":"right","floating_favorites_margin_top":50,"floating_favorites_url_match":"","floating_favorites_background_color":"#ffffff","floating_favorites_border_color":"#b9b9b9","floating_favorites_border_width":1,"floating_favorites_text":"♥ Favorites","floating_favorites_color":"#1b1b1b","heart_icon_type":"default","heart_icon_typedefault_background_color":"#ff8989","heart_icon_typedefault_border_color":"#ff9c9c","heart_icon_typedefault_border_width":2,"heart_icon_typedefault_icon_color":"#ffffff","heart_icon_show_count":false,"heart_icon_typecustom_image_url":"https://cc-swim.herokuapp.com/wishlist.png","btn_text_size":"16.0","locale":"en","shop_star_rating":null,"shop_star_feedback":null,"heart_icon_collection_before_add_color":"#dfdfdf","heart_icon_collection_after_add_color":"#606060","login_link_bg_color":"#5c6ac4","login_link_text_color":"#3f4eae","btn_remove_bg_color":"#ffffff","btn_remove_border_color":"#b9b9b9","btn_remove_border_width":1,"btn_remove_text":"♡ Remove from wishlist","btn_remove_color":"#1b1b1b","btn_remove_text_size":"16.0","open_wishlist_after_add_to_wishlist":true};  Shopify.wishy_button_css_json = "";  {% if customer %}  Shopify.wishy_customer_email = "{{ customer.email }}" ;  {% else %}  Shopify.wishy_customer_email = "" ;  {% endif %}</script><!-- EndWishyAddon -->
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+
+  {% section 'header' %}
+
+  <main class="main-content" role="main">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  <script id="JsQty" type="text/template">
+  {% raw %}
+    <div class="js-qty">
+      <button type="button" class="js-qty__adjust js-qty__adjust--minus" data-id="{{id}}" data-qty="{{itemMinus}}">&minus;</button>
+      <input type="text" class="js-qty__num QuantityInput" value="{{itemQty}}" min="1" data-id="{{id}}" aria-label="quantity" pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}" data-submit="{{submit}}">
+      <button type="button" class="js-qty__adjust js-qty__adjust--plus" data-id="{{id}}" data-qty="{{itemAdd}}">+</button>
+    </div>
+  {% endraw %}
+  </script>
+  <script id="JsQty--cart" type="text/template">
+  {% raw %}
+    <div class="js-qty">
+      <button type="button" class="js-qty__adjust js-qty__adjust--minus" data-id="{{id}}" data-qty="{{itemMinus}}">&minus;</button>
+      <input type="text" value="{{itemQty}}" class="js-qty__num QuantityInput"  min="1" data-id="{{id}}" aria-label="quantity" pattern="[0-9]*" name="updates[]" id="updates_{{id}}" data-submit="{{submit}}">
+      <button type="button" class="js-qty__adjust js-qty__adjust--plus" data-id="{{id}}" data-qty="{{itemAdd}}">+</button>
+    </div>
+  {% endraw %}
+  </script>
+
+  <!-- Shop.js ============================================================== -->
+  {{ 'shop.js' | asset_url | script_tag }}
+
+  {% unless settings.cart_type == 'page' %}
+  <!-- Ajaxify Cart Plugin ================================================== -->
+    {{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
+    {% include 'ajax-cart-template' %}
+    {{ 'ajaxify.js' | asset_url | script_tag }}
+    <script>
+      jQuery(document).ready(function(){
+       ajaxifyShopify.init({
+         method: 'modal',
+         wrapperClass: 'wrapper',
+         formSelector: '.product-form',
+         addToCartSelector: '.addToCart',
+         cartCountSelector: '.cartCount',
+         cartCostSelector: '.cartCost',
+         toggleCartButton: '.CartToggle',
+         useCartTemplate: true,
+         btnClass: 'btn',
+         moneyFormat: {{ shop.money_format | json }},
+         disableAjaxCart: false,
+         enableQtySelectors: true,
+         prependDrawerTo: 'body',
+         onToggleCallback: function(){
+           jQuery('body').trigger('ajaxCart.afterCartLoad')
+         }
+       });
+      });
+    </script>
+  {% endunless %}
+
+  <script>
+    {% if newHash %}
+      $(function() {
+        timber.updateHash('{{ newHash }}');
+      });
+    {% endif %}
+    {% if resetPassword %}
+      $(function() {
+        timber.resetPasswordSuccess();
+      });
+    {% endif %}
+  </script>
+
+  <!-- Paste mailchimp popup code between comments ===================================== -->
+
+  <!-- End mailchimp ================================================== -->
+
+
+{% include 'swymSnippet' %}
+
+{% include 'back-in-stock-helper' %}
+</body>
+</html>

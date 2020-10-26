@@ -1,0 +1,90 @@
+{%- assign product_img_url = product.featured_image.src | img_url: '700x' -%}
+{%- if grid_width_large == 'large--one-whole' -%}
+  {%- assign product_img_url = product.featured_image.src | img_url: '1200x' -%}
+{%- elsif grid_width_large == 'large--one-half' -%}
+  {%- assign product_img_url = product.featured_image.src | img_url: '900x' -%}
+{%- endif -%}
+
+{%- assign on_sale = false -%}
+{%- if product.compare_at_price > product.price -%}
+  {%- assign on_sale = true -%}
+{%- endif -%}
+
+{%- assign sold_out = true -%}
+{%- if product.available -%}
+  {%- assign sold_out = false -%}
+{%- endif -%}
+
+{%- assign new_product = false -%}
+{%- assign published_date = product.published_at | date: "%s"  -%}
+{%- assign now_date = 'now' | date: "%s" -%}
+{%- assign age_in_days = now_date | minus: published_date | divided_by: 60 | divided_by: 60 | divided_by: 12 -%}
+{%- if age_in_days < settings.tag_new_limit -%}
+  {%- assign new_product = true -%}
+{%- endif -%}
+
+{%- assign sellout_tag = false -%}
+{%- if sold_out and settings.tag_sellout -%}
+  {%- assign sellout_tag = true -%}
+{%- endif -%}
+
+{%- assign new_tag = false -%}
+{%- if new_product and settings.tag_new -%}
+  {%- assign new_tag = true -%}
+{%- endif -%}
+
+{%- assign sale_tag = false -%}
+{%- if on_sale and settings.tag_sale -%}
+  {%- assign sale_tag = true -%}
+{%- endif -%}
+
+{%- assign tagged = false -%}
+{%- if sellout_tag or new_tag or sale_tag -%}
+  {%- assign tagged = true -%}
+{%- endif -%}
+
+{%- capture sticker -%}
+  {%- if tagged %}
+    {%- if sellout_tag -%}
+      <div class="sticker sticker--sold">{{ 'products.product.sold_out' | t }}</div>
+    {%- elsif sale_tag -%}
+      <div class="sticker sticker--sale">{{ 'products.product.sale' | t }}</div>
+    {%- elsif new_tag -%}
+      <div class="sticker sticker--new">{{ 'products.product.new' | t }}</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+<div class="grid__item {{ grid_offset }} {{ grid_width_small }} {{ grid_width_medium }} {{ grid_width_large }}{% if on_sale %} on-sale{% endif %}{% if tagged %} tagged{% endif %} product-grid-item">
+  <a href="{{ product.url | within: collection }}" class="grid__image">
+    <img src="{{ product_img_url }}" alt="{{ product.featured_image.alt | escape }}">
+    {{ sticker }}
+  </a>
+  <div class="figcaption {{ settings.product_grid_style }} {{ settings.collection_text_alignment | default: 'text-left' }}">
+    <a href="{{ product.url | within: collection | capitalize }}">
+      <class="h6 name_wrapper">
+        {{ product.title }}
+     
+      <p class="price_wrapper">
+        <span class="price{% if on_sale %} on-sale{% endif %}">
+          {% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}
+          <span class="money">{{ product.price | money }}</span>
+        </span>
+        {% if sold_out %}
+        <br /><em>{{ 'products.product.sold_out' | t }}</em>
+        {% endif %}
+        {% if on_sale %}
+        <span class="compare-at">
+          <span class="money">{{ product.compare_at_price | money }}</span>
+        </span>
+        {% endif %}
+        {% if product.metafields.spr.reviews %}
+          <br />
+          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+        {% endif %}
+      </p>
+    </a>
+  </div>
+</div>
+  
+ 

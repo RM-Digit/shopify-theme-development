@@ -1,0 +1,1572 @@
+{
+  "current": {
+    "color_account_bg": "#ffffff",
+    "color_account_text": "#585858",
+    "color_header_bg": "#ffffff",
+    "color_header_text": "#585858",
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#585858",
+    "color_primary": "#585858",
+    "color_splash": "#3a8da7",
+    "color_border": "#929292",
+    "homepage_background_light": "#f7f7f7",
+    "homepage_background_dark": "#3a8da7",
+    "product_background_color": "#ffffff",
+    "product_slideshow_arrows": "#cccccc",
+    "color_footer_bg": "#f7f7f7",
+    "color_footer_text": "#656565",
+    "color_footer_social_link": "#a9a9a9",
+    "font_title": "google:sansStack:Roboto:400",
+    "font_title_capitalize": true,
+    "font_accent": "google:sansStack:Roboto:400",
+    "font_body": "google:sansStack:Roboto:400",
+    "base_font_px": 13,
+    "cart_type": "modal",
+    "cart_show_on_click": false,
+    "cart_vendor_enable": false,
+    "cart_notes_enable": true,
+    "cart_quantity": true,
+    "cart_show_additional_buttons": true,
+    "cart_continue_browsing": "shopify:\/\/collections\/all",
+    "collection_text_alignment": "text-center",
+    "product_grid_style": "under",
+    "image_autoheight_enable": true,
+    "tag_sellout": false,
+    "tag_sale": true,
+    "tag_new": true,
+    "tag_new_limit": 34,
+    "twittercard_handle": "",
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/primitivechoice\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/primitive_choice\/",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/primitivechoice\/pins\/",
+    "social_google_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_tumblr_link": "",
+    "social_fancy_link": "",
+    "product_social_enable": true,
+    "share_enable_facebook": true,
+    "share_enable_twitter": true,
+    "share_enable_pinterest": true,
+    "share_enable_google": false,
+    "social_home_image": "",
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Roboto",
+    "checkout_accent_color": "#1990c6",
+    "checkout_button_color": "#1990c6",
+    "checkout_error_color": "#ff6d6d",
+    "checkout_use_header_image": false,
+    "checkout_logo": "",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "",
+          "logo_max_limit": 250,
+          "main_menu_linklist": "main-menu",
+          "height": "header--medium",
+          "meganav_image": "",
+          "meganav_link": "",
+          "header_message": "",
+          "header_message_url": "",
+          "header_enable_account": true,
+          "header_enable_search": true,
+          "search_only_products": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "THANK YOU",
+              "text": "<p>At Primitive Choice, I&nbsp;strive to provide you a wide variety of high quality meat products so that you can&nbsp;nourish your pet with the &nbsp;best diet on the planet, all while staying on a&nbsp;reasonably priced budget. Thank you for supporting a small business!<\/p>"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "text": "Subscribe to get special offer codes, free giveaways, price drops, new item alerts and more!"
+            }
+          },
+          "1517516284086": {
+            "type": "text",
+            "settings": {
+              "title": "Earn rewards",
+              "text": "<p>Did you know you can earn points for for simply shopping at&nbsp;Primitive Choice?! All you have to do is create an account when you checkout. Your points&nbsp;start accumulating on your very first order!<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text",
+          "newsletter",
+          "1517516284086"
+        ],
+        "settings": {
+          "footer_image": "",
+          "footer_secondary_linklist": "footer",
+          "footer_payment_enable": false,
+          "footer_social_enable": true
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "1518159429921": {
+            "type": "tab_description",
+            "settings": {}
+          },
+          "1518580618367": {
+            "type": "tab_richtext",
+            "settings": {
+              "title": "SHIPPING",
+              "raw_content": "<p>&bull;<strong> ALL orders are currently being shipped on the closest following Monday even if the order is placed Friday - Sunday. This stands unless otherwise posted. Excludes any sales.<\/strong><br>&bull; If you need the order to be held, you must notate this in the notes section when you place your order.<br>&bull;&nbsp;Shipping is available to the entire continental US, with transit times varying 1 to 4 days.&nbsp;<br>&bull;&nbsp;There is a <strong>hard 15 pound minimum<\/strong> on all raw meat orders.<br>&bull;&nbsp;The minimum strictly only includes raw items and not any dry goods.<br>&bull; Please&nbsp;do not choose the dry goods shipping rate if your box includes any raw meat at all.<br>&bull; It is recommend to order&nbsp;56-pound boxes&nbsp;in order to receive&nbsp;the&nbsp;best shipping rate.<br>&bull; Please place your order at least 5 business days in advanced from when you need your order to ship. Orders ONLY ship out on Monday.<br>&bull; There is no order minimum if you are solely purchasing dry goods. However, if your order includes any raw meat in addition to dry goods, then you must meet the 15-pound minimum.&nbsp;<br>&bull; There is no minimum or maximum order for local pick ups - regardless of order size there will be a $5 pick up fee. Pick-ups take place on Tuesdays and Thursdays from 5-6pm.<br>&bull; For more information regarding shipping and pick-up, please visit the&nbsp;<a href=\"https:\/\/www.primitivechoice.com\/pages\/faq-1\">FAQ<\/a>&nbsp;page.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1518159429921",
+          "1518580618367"
+        ],
+        "settings": {
+          "product_breadcrumbs": true,
+          "show_quantity": true,
+          "product_nav_enable": true,
+          "product_show_vendor": false,
+          "zoom_enable": true,
+          "related_products_enable": true,
+          "product_reviews_enable": true,
+          "info_page": "",
+          "tabs_position": "below"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "grid_setting_large": 4,
+          "grid_setting_medium": 2,
+          "grid_setting_small": 2,
+          "collection_custom_nav_list": "sidebar-menu",
+          "collection_standard_nav": false,
+          "collection_type_nav": false,
+          "collection_vendor_nav": false,
+          "collection_tag_nav": false,
+          "collection_sorting": true,
+          "image_height": "use_screen_one_third",
+          "overlay_opacity": 0,
+          "text_color": "homepage--dark",
+          "parallax": true
+        }
+      },
+      "blog": {
+        "type": "blog",
+        "settings": {
+          "layout": "grid",
+          "blog_show_meta": true,
+          "image": "",
+          "overlay_opacity": 0,
+          "text_color": "homepage--light",
+          "parallax": false,
+          "tags": false
+        }
+      },
+      "article": {
+        "type": "article",
+        "settings": {
+          "blog_show_meta": true,
+          "tags": false,
+          "social": true,
+          "image_height": "use_screen_one_half",
+          "parallax": false,
+          "sidebar_tags": false,
+          "recent": true
+        }
+      },
+      "index-product": {
+        "type": "index-product",
+        "settings": {
+          "title": "Featured product",
+          "home_product": "",
+          "homepage_product_color": "homepage--white",
+          "show_quantity": true,
+          "product_show_vendor": false,
+          "zoom_enable": false,
+          "info_page": "",
+          "tabs_position": "below"
+        }
+      },
+      "index-double": {
+        "type": "index-double",
+        "blocks": {
+          "index-double-1": {
+            "type": "text",
+            "settings": {
+              "title": "MADE IN THE USA",
+              "richtext": "<p>Primitive Choice proudly supports the USA&nbsp;by sourcing the meat, shop equipment and all packaging supplies right&nbsp;from home!<\/p>\n<p><\/p>\n<p>The vast majority of the meat products are born, raised and harvested right here in the&nbsp;USA. A&nbsp;select product is from Canada while another is from&nbsp;New Zealand and one from Australia in order to provide a superior product.<\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "index-double-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hannahbeaver_8.jpg",
+              "overlay_opacity": 5,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "index-double-1",
+          "index-double-0"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "index-columns": {
+        "type": "index-columns",
+        "blocks": {
+          "index-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/image1_82814c5b-bd89-4ab0-acea-774eadff5d14.jpeg",
+              "title": "continental us shipping",
+              "text": "<p>No matter&nbsp;where you live in the Continental US, a truck with your box full of meat will make it to your front door&nbsp;in 4 days or less once it ships from Colorado.<\/p>",
+              "button_label": "BROWSE SHIPPING QUESTIONS",
+              "button_link": "https:\/\/primitive-choice.myshopify.com\/apps\/help-center#!do-you-ship-to-my-city"
+            }
+          },
+          "index-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5145_copy_2_e821cf24-2f53-43e4-a0e3-090e28b734d1.jpeg",
+              "title": "FLEXIBLE local pickup",
+              "text": "<p>Those customers living close to Primitive Choice may choose to pick up their order instead of shipping it. The pick up location is in Fountain, CO 80817.<\/p>",
+              "button_label": "LOCAL PICK UP INFORMATION",
+              "button_link": "https:\/\/primitive-choice.myshopify.com\/apps\/help-center#!do-you-offer-local-pick-up"
+            }
+          }
+        },
+        "block_order": [
+          "index-columns-1",
+          "index-columns-2"
+        ],
+        "settings": {
+          "title": "cross country shipping & local colorado pickup",
+          "homepage_columns_color": "homepage--light",
+          "align_text": "text-center"
+        }
+      },
+      "index-blog": {
+        "type": "index-blog",
+        "disabled": true,
+        "settings": {
+          "title": "RECENT BLOGS",
+          "homepage_blog": "primitive-choice",
+          "homepage_blog_count": 2,
+          "homepage_blog_color": "homepage--white"
+        }
+      },
+      "1517381607435": {
+        "type": "index-double",
+        "blocks": {
+          "1517381607435-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_0707_copy.JPG",
+              "overlay_opacity": 0,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1517381607435-1": {
+            "type": "text",
+            "settings": {
+              "title": "LOCAL SOURCING",
+              "richtext": "<p>Primitive Choice is pleased&nbsp;to source the wide&nbsp;variety of the provided meat products from local farms right here in Colorado.<\/p>\n<p><br>I have personally&nbsp;selected&nbsp;to work with these individual farms based on their&nbsp;superior level of sustainability and ethics behind the treatment of their animals.<\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1517381607435-0",
+          "1517381607435-1"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "1517516629669": {
+        "type": "index-double",
+        "blocks": {
+          "1517516629669-1": {
+            "type": "text",
+            "settings": {
+              "title": "trust in our suppliers",
+              "richtext": "<p>The vast majority of the meat products are proudly sourced in the&nbsp;USA. One select product is from Canada while another is from&nbsp;New Zealand and Australia &nbsp;in order to provide a superior product.<br><br><\/p>\n<p>All seafood and fish are wild-caught, never farmed-raised.<\/p>\n<p><\/p>\n<p>Hand crafted and responsibly sourced&nbsp;<\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "1517516629669-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/28584423_10101365628940679_1602255746_o_copy_2443260a-8690-4ca8-ad40-c65132e8120b.jpg",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1517516629669-1",
+          "1517516629669-0"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "1517522436110": {
+        "type": "index-double",
+        "blocks": {
+          "1517522436110-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_7890.JPG",
+              "overlay_opacity": 5,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1517522468469": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Raw Feeding Newsletter",
+              "richtext": "<p>Subscribe to get special offer codes, free giveaways, price drops, flash sales, new item alerts and much more!<\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light"
+            }
+          }
+        },
+        "block_order": [
+          "1517522436110-0",
+          "1517522468469"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "list-collections": {
+        "type": "list-collections",
+        "settings": {
+          "display_type": "all",
+          "grid": 4,
+          "rows": 2
+        }
+      },
+      "1519339143617": {
+        "type": "index-collection",
+        "settings": {
+          "title": "CURRENT SALES",
+          "collection": "on-sale",
+          "grid": 4,
+          "rows": 2,
+          "homepage_collection_color": "homepage--white",
+          "show_view_all": true
+        }
+      },
+      "1519365027971": {
+        "type": "index-page",
+        "blocks": {
+          "1519365027971-0": {
+            "type": "text",
+            "settings": {
+              "title": "raw meat delivered on my doorstep in two days",
+              "home_page_richtext": "<p>\"I recently got my first shipment in and was impressed by the prompt customer service and great affordable products!! I am very excited to have a raw food supplier that has fast and reasonably priced shipping to the west coast!\"<br><br><strong>@Rawfedroadies,&nbsp;Nevada<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1519365027971-0"
+        ],
+        "settings": {
+          "homepage_page_color": "homepage--white"
+        }
+      },
+      "1519368962815": {
+        "type": "index-columns",
+        "blocks": {
+          "1519368962815-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/miranda_facebook_2.jpg",
+              "title": "POINTS & REWARDS",
+              "text": "<p>You can now earn points for every dollar you spend at Primitive Choice! Simply click on the box \"earn rewards\" in the lower right hand corner of this window and create an account for your points automatically start accumulating!<\/p>",
+              "button_label": "LEARN MORE",
+              "button_link": "https:\/\/primitive-choice.myshopify.com\/apps\/help-center#!how-does-your-referral-card-work"
+            }
+          },
+          "1519368962815-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/DSC05846_1024x1024-2.JPG",
+              "title": "WE SUPPORT SMALL BUSINESSES",
+              "text": "<p>Primitive Choice was founded in 2017 with the goal of becoming an online one stop show for raw food and&nbsp;pet supplies not sold in stores. My vision is to sell products that I personally use for my pets that come from other small businesses.<\/p>",
+              "button_label": "shop small",
+              "button_link": "shopify:\/\/collections\/shop-small"
+            }
+          }
+        },
+        "block_order": [
+          "1519368962815-0",
+          "1519368962815-2"
+        ],
+        "settings": {
+          "title": "",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "1519454533708": {
+        "type": "index-double",
+        "disabled": true,
+        "blocks": {
+          "1519454533708-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-02-23_at_10.48.18_PM_copy.png",
+              "overlay_opacity": 15,
+              "title": "BENIFIT",
+              "description": "SPARKLING WHITE TEETH WITHOUT ANESTHESIA",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "shopify:\/\/products\/aniflexi-ha",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519455104893": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-02-23_at_10.46.13_PM_copy.png",
+              "overlay_opacity": 15,
+              "title": "MYTH",
+              "description": "RAW FEEDING MAKES PETS AGGRESSIVE",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519454533708-0",
+          "1519455104893"
+        ],
+        "settings": {
+          "height": "use_screen_one_half"
+        }
+      },
+      "1519455225358": {
+        "type": "index-columns",
+        "blocks": {
+          "1519455225358-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5782_ae5d25fe-6e0c-4884-afb7-4a375c3b7ad2.jpeg",
+              "title": "EVERY DOG BREED",
+              "text": "<p>Raw feeding is not just for the big dogs or certain breeds, it is for every&nbsp;dog&nbsp;from&nbsp;chihuahuas to a great danes. One thing to remember is to match the size of edible bones&nbsp;to the dog that you are feeding.<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/blog"
+            }
+          },
+          "1519455225358-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5174_copy_9c17b37c-422a-4316-9005-be772870e808.jpeg",
+              "title": "CATS OF ALL SIZES",
+              "text": "<p>Did you know your feline craves a raw diet just as much as your canine?! Your cat is ready to pounce on the opportunity to nourish their true nature. While they&nbsp;can be trickier to transition, there&nbsp;are tips to help!<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/blogs\/news"
+            }
+          },
+          "1519455225358-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/puppy_786263b7-13cb-4a48-a633-49e67a2c2483.jpg",
+              "title": "PUPPIES & KITTENS",
+              "text": "<p>There is only one main&nbsp;difference between raw feeding adult pets and growing youngsters; and that is that their meals have to be completely balanced every single day versus say over a weeks time.<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/blogs\/news"
+            }
+          }
+        },
+        "block_order": [
+          "1519455225358-0",
+          "1519455225358-1",
+          "1519455225358-2"
+        ],
+        "settings": {
+          "title": "YOUR PETS CRAVE A SPECIES APPROPRIATE RAW DIET",
+          "homepage_columns_color": "homepage--light",
+          "align_text": "text-center"
+        }
+      },
+      "1519456694827": {
+        "type": "index-columns",
+        "blocks": {
+          "1519456694827-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": false,
+              "image": "",
+              "title": "longer lifespan",
+              "text": "<p>\"My dog has been eating a balanced raw food<br> diet since she was 5 years old. She just turned 12 and is going strong as if she was 6\"<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1519456694827-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": false,
+              "image": "",
+              "title": "far fewer vet visits",
+              "text": "<p>\"Ever since switching to&nbsp;a raw food diet 4 years ago, my pets have not been to the vet due to&nbsp;any type of health complication. That says a lot!\"<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1519456694827-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": false,
+              "image": "",
+              "title": "pearly white teeth",
+              "text": "<p>\"My 3 year old had teeth of a 13 year old when he was on kibble. Within the first few months of feeding raw his&nbsp;teeth became nearly perfectly clean!\"<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519456694827-0",
+          "1519456694827-1",
+          "1519456694827-2"
+        ],
+        "settings": {
+          "title": "top 3 reasons customers feed raw",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "1519497850216": {
+        "type": "index-columns",
+        "blocks": {
+          "1519497850216-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/LAMB_SPLEEN_HOME_PAGE.jpg",
+              "title": "",
+              "text": "",
+              "button_label": "NEW ITEMS",
+              "button_link": "shopify:\/\/collections\/new"
+            }
+          },
+          "1519497850216-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/trachea_home_page_only.jpg",
+              "title": "",
+              "text": "",
+              "button_label": "CUSTOMER FAVORITES",
+              "button_link": "shopify:\/\/collections\/primitive-choice-favorites"
+            }
+          },
+          "1519497850216-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/TURKEY_HEART_HOEM_PAGE.jpg",
+              "title": "",
+              "text": "",
+              "button_label": "BEST SELLERS",
+              "button_link": "shopify:\/\/collections\/best-sellers-1"
+            }
+          }
+        },
+        "block_order": [
+          "1519497850216-0",
+          "1519497850216-2",
+          "1519497850216-1"
+        ],
+        "settings": {
+          "title": "",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "1519508171879": {
+        "type": "index-page",
+        "blocks": {
+          "1519508171879-0": {
+            "type": "text",
+            "settings": {
+              "title": "I'M A PRIMITIVE CHOICE CUSTOMER FOR LIFE",
+              "home_page_richtext": "<p>\"Shea-la has provided me with such outstanding customer service from day one. I will not shop for raw on any other website, honestly! Price wise and quality wise, none compare. When I say customer for life, I mean it!!\"<br><br><strong>@Rawfedbully, Montana<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1519508171879-0"
+        ],
+        "settings": {
+          "homepage_page_color": "homepage--white"
+        }
+      },
+      "1519522850233": {
+        "type": "index-slideshow",
+        "disabled": true,
+        "blocks": {
+          "1519522850233-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_2629.jpeg",
+              "overlay_opacity": 40,
+              "title": "new website sale",
+              "description": "Enjoy 10% off your first purchase from the new website!",
+              "text_align": "text-center",
+              "color": "homepage--light",
+              "link_text": "shop now & save",
+              "link": "shopify:\/\/collections\/all-products-for-related-link",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519523441356": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/primitive_krueger_100_copy_fc5e763a-2a46-4839-96ea-5c5e23456b7d.jpg",
+              "overlay_opacity": 40,
+              "title": "closed for one day",
+              "description": "Primitive choice will be closed Monday February 25th. Shipping will resume on Wednesday Feb 30th for all 1 to 3 day orders and Monday March 3rd for all 4 day orders.",
+              "text_align": "text-center",
+              "color": "homepage--light",
+              "link_text": "view shop closings",
+              "link": "",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519522850233-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "overlay_opacity": 15,
+              "title": "back in stock",
+              "description": "Your favorite items are available to buy!",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "View products",
+              "link": "",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519522850233-0",
+          "1519523441356",
+          "1519522850233-1"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 8,
+          "height": "use_screen_two_thirds"
+        }
+      },
+      "page-double": {
+        "type": "page-double",
+        "blocks": {
+          "1519803406852": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_0707_copy.JPG",
+              "overlay_opacity": 0,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519803440106": {
+            "type": "text",
+            "settings": {
+              "title": "customer for life",
+              "richtext": "<p>I will never shop anywhere else for raw food. Primitive Choice has competitive pricing and great customer service!!!<\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1519803406852",
+          "1519803440106"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "1519801410754": {
+        "type": "page-banner-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Homescreen.jpg",
+          "height": "use_screen_full",
+          "overlay_opacity": 15,
+          "parallax": false,
+          "title": "DOMESTIC PETS CRAVE THEIR PRIMITIVE INSTINCTS",
+          "description": "",
+          "text_align": "text-center",
+          "color": "homepage--white",
+          "link_text": "shop now",
+          "link": "shopify:\/\/collections\/all-products-for-related-link",
+          "button_style": "btn btn--large btn--clear btn--square uppercase",
+          "button_image": ""
+        }
+      },
+      "page-columns": {
+        "type": "page-columns",
+        "blocks": {
+          "1519802531591": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/hannahbeaver_4_fff84d8d-52b6-4b31-ba77-d810a880bf66.jpg",
+              "title": "nova, nax, zavala",
+              "text": "",
+              "button_label": "@woodlandsiberians",
+              "button_link": "https:\/\/www.instagram.com\/woodlandsiberians\/"
+            }
+          },
+          "1519802535264": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/28768275_10101366265220569_1978106537_o.jpg",
+              "title": "life is better at elevation",
+              "text": "",
+              "button_label": "@jillron",
+              "button_link": "https:\/\/www.instagram.com\/tuckerleo_da_huskies\/"
+            }
+          },
+          "1519802537909": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5782_ae5d25fe-6e0c-4884-afb7-4a375c3b7ad2.jpeg",
+              "title": "AN AUSTRALIAN AND A GERMAN",
+              "text": "",
+              "button_label": "@this.shepherd.life",
+              "button_link": "https:\/\/www.instagram.com\/zozo_malinois\/"
+            }
+          },
+          "1519802598929": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5145_copy_2_2986e115-1ca7-436f-878c-4fe969595ff0.jpeg",
+              "title": "SERIOUS DOGS FOR SERIOUS PEOPLE",
+              "text": "",
+              "button_label": "@canineathletes",
+              "button_link": "https:\/\/www.instagram.com\/canineathletes\/"
+            }
+          },
+          "1519802608052": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/DSC05846_1024x1024-2.JPG",
+              "title": "ALSO KNOWN AS DOG CRACK",
+              "text": "",
+              "button_label": "K9_KRAVERS",
+              "button_link": "https:\/\/www.instagram.com\/k9_kravers\/"
+            }
+          },
+          "1519802603336": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_5174_copy_2_793700db-a6d5-410b-aceb-2d1bd4ffcd8b.jpeg",
+              "title": "Tangyuan - Pinky - Froggy",
+              "text": "",
+              "button_label": "@toomanylegs",
+              "button_link": "https:\/\/www.instagram.com\/twomanylegs\/"
+            }
+          },
+          "1519890433966": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/drogontheamazing_1.jpeg",
+              "title": "LIVING ONE ADVENTURE AT A TIME",
+              "text": "",
+              "button_label": "@drogontheamazing",
+              "button_link": "https:\/\/www.instagram.com\/drogontheamazing\/"
+            }
+          },
+          "1519890687357": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/IMG_2623.jpeg",
+              "title": "sage!",
+              "text": "",
+              "button_label": "@rawfedbully",
+              "button_link": "https:\/\/www.instagram.com\/rawfedbully\/"
+            }
+          },
+          "1519890806349": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/miranda_facebook_2.jpg",
+              "title": "Life is short, so are my legs",
+              "text": "",
+              "button_label": "@thedutchcorgi",
+              "button_link": "https:\/\/www.instagram.com\/thedutchcorgi\/"
+            }
+          },
+          "1520558130150": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/puppy_786263b7-13cb-4a48-a633-49e67a2c2483.jpg",
+              "title": "Holistic Labrador Raiser",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": "@socalrawfeddogs",
+              "button_link": "https:\/\/www.instagram.com\/socalrawfeddogs\/"
+            }
+          }
+        },
+        "block_order": [
+          "1519802531591",
+          "1519802535264",
+          "1519802537909",
+          "1519802598929",
+          "1519802608052",
+          "1519802603336",
+          "1519890433966",
+          "1519890687357",
+          "1519890806349",
+          "1520558130150"
+        ],
+        "settings": {
+          "title": "SHOUTOUT TO THE AWESOME PHOTOGRAPHS",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "page-double-1": {
+        "type": "page-double-1",
+        "blocks": {
+          "1519814349498": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/26167695_10156237092603933_199619451204658036_n.jpg",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/agility_nerd\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519814359179": {
+            "type": "text",
+            "settings": {
+              "title": "agility dog on a raw diet",
+              "richtext": "<p>By far THE BEST online raw food supplier I've dealt with! I run my dogs in agility and I know I want them to perform at their peak performance, and I knew feeding them raw was the only way to go to get those results! I contacted Primitive Choice with my first order and it was a BREEZE! Super helpful and if I ever have any questions they are answered immediately. My dogs love the variety I am able to get! The quality of their products are second to non and I plan on placing many more orders! I also like the fact that if I'm in their area I can pick up the items instead of shipping them! Again, if you want to best, go with Primitive Choice!!!!<\/p>\n<p><\/p>\n<p><strong>@agility_nerd, Wyoming<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1519814349498",
+          "1519814359179"
+        ],
+        "settings": {
+          "height": "use_screen_one_half"
+        }
+      },
+      "page-double-2": {
+        "type": "page-double-2",
+        "blocks": {
+          "1519814443038": {
+            "type": "text",
+            "settings": {
+              "title": "SO GLAD I FOUND PRIMITIVE CHOICE",
+              "richtext": "<p>When we first moved to Denver, we decided to switch our two dogs to a prey model raw diet. One of the hardest things was finding all the different things that we needed to put into their diet - going to random grocery stores, butchers, and ordering from different online retailers was just a pain in the butt making me wonder if I had made the right decision. I knew this was the diet I wanted to keep my dogs on, but wished more than anything I could find one affordable place where I could purchase ALL the different bone, meats, and organs we needed. I was SO happy when I first found out about Primitive Choice, and soon made my first order. I decided to make the drive up to Loveland to pick up, and had the chance to meet Shea who was sooo friendly and sweet. She has been a huge help and has been amazing the whole time we have been customers. The meats are quality, affordable, and not to mention my dogs LOVE everything we have gotten from Primitive Choice. We feel so lucky to have found such an awesome local business that lets us feed our dogs the way they were meant to eat!!!<\/p>\n<p><\/p>\n<p><strong>@tuckerleo_da_huskies,&nbsp;Colorado<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "1519814426855": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-03-06_at_10.29.37_AM.png",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/tuckerleo_da_huskies\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519814443038",
+          "1519814426855"
+        ],
+        "settings": {
+          "height": "use_screen_full"
+        }
+      },
+      "page-double-3": {
+        "type": "page-double-3",
+        "blocks": {
+          "1519814480872": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_5652.JPG",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/drogontheamazing\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519814491512": {
+            "type": "text",
+            "settings": {
+              "title": "my picky eater eats everything",
+              "richtext": "<p>Feeding our dog raw has been a journey. He was PICKY!!! We completely took him off kibble about a year ago and substituted it with frozen raw and freeze dried foods. After further research, I knew I wanted him completely on raw meals so I started looking into raw feeding sites. There are so many out there but Primitive Choice was recommended to me so I gave it a try and I couldn&rsquo;t be happier with their service. Shae-la is amazing! Her packaging is great, it maintains everything inside nice and frozen. Her prices are fair and her customer service tops it all off! Always so helpful and willing to work with you if you were to have a special request. Overall a great company!<\/p>\n<p><\/p>\n<p><strong>@drogontheamazing, Oregon<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1519814480872",
+          "1519814491512"
+        ],
+        "settings": {
+          "height": "use_screen_two_thirds"
+        }
+      },
+      "page-double-4": {
+        "type": "page-double-4",
+        "blocks": {
+          "1519814521861": {
+            "type": "text",
+            "settings": {
+              "title": "PRIMITIVE CHOICE CUSTOMER FOR LIFE",
+              "richtext": "<p>Shea-la has provided me with such outstanding customer service since day one! I will not shop for raw on any other website, honestly. Price wise and quality wise, none compare! When I said customer for life, I meant it!<\/p>\n<p><\/p>\n<p><strong>@rawfedbully, Montana<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "1519814508927": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_2623.jpeg",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/rawfedbully\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519814521861",
+          "1519814508927"
+        ],
+        "settings": {
+          "height": "use_screen_one_half"
+        }
+      },
+      "page-double-5": {
+        "type": "page-double-5",
+        "blocks": {
+          "1519814546340": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_5855_copy.jpg",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/grisby.the.giant\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519814549864": {
+            "type": "text",
+            "settings": {
+              "title": "CANT BEAT THE TREATS",
+              "richtext": "<p>Got the variety pack of dehydrated treats and they're fabulous! My dog loves them and best of all, I trust the product 100%. Happy customer and pup--we will be buying more! Thank you!<\/p>\n<p><\/p>\n<p><strong>@grisby.the.giant, California<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1519814546340",
+          "1519814549864"
+        ],
+        "settings": {
+          "height": "use_screen_one_third"
+        }
+      },
+      "page-double-6": {
+        "type": "page-double-6",
+        "blocks": {
+          "1519814571265": {
+            "type": "text",
+            "settings": {
+              "title": "higher than 5 stars",
+              "richtext": "<p>\"Feeding our dog raw has been a journey. He was PICKY!!! We completely took him off kibble about a year ago and substituted it with frozen raw and freeze dried foods. After further research, I knew I wanted him completely on raw meals so I started looking into raw feeding sites. There are so many out there but Primitive Choice was recommended to me so I gave it a try and I couldn&rsquo;t be happier with their service. Shae-la is amazing! Her packaging is great, it maintains everything inside nice and frozen. Her prices are fair and her customer service tops it all off! Always so helpful and willing to work with you if you were to have a special request. Overall a great company!\"<\/p>\n<p><\/p>\n<p><strong>@trivyas, Washington<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "1519814568224": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20180228_223820.jpg",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519814571265",
+          "1519814568224"
+        ],
+        "settings": {
+          "height": "use_screen_two_thirds"
+        }
+      },
+      "page-double-7": {
+        "type": "page-double-7",
+        "blocks": {
+          "1519814585871": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-03-06_at_10.21.31_AM_af4c4ed7-a3ee-4888-9858-929407e301c0.png",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/rawfedroadies\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1519814588821": {
+            "type": "text",
+            "settings": {
+              "title": "such affordable pricing",
+              "richtext": "<p>I recently got my first shipment in, and was impressed by the prompt customer service, and great, affordable products (and shipping!). I am very excited to have a raw food supplier that has fast and reasonably priced shipping to the west coast!<\/p>\n<p><\/p>\n<p><strong>@rawfedraodies, Nevada<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          }
+        },
+        "block_order": [
+          "1519814585871",
+          "1519814588821"
+        ],
+        "settings": {
+          "height": "use_screen_one_half"
+        }
+      },
+      "page-double-8": {
+        "type": "page-double-8",
+        "blocks": {
+          "1519814600459": {
+            "type": "text",
+            "settings": {
+              "title": "OVER THE MOON HAPPY",
+              "richtext": "<p>Just got the first order today and our Arrow was all over it and wanted to chow down! I would give more than 5 stars if there was a way! Excellent customer service as I asked for some favors prior to my order and they were super flexible and made things happen. I love how the box is neatly done and secure for transport and the items were all individually wrapped so I can just throw them in the freezer. No hassle no mess! Wish I had a place to post pics here but I&rsquo;ll post it on the visitors posting page. Can&rsquo;t wait for our boy to try them!<\/p>\n<p><\/p>\n<p><strong>@siberianhuskyarrow, California&nbsp;<\/strong><\/p>",
+              "text_align": "text-center",
+              "homepage_bg_color": "homepage--light",
+              "link_text": "",
+              "link": "",
+              "button_style": "btn btn--clear btn--square uppercase"
+            }
+          },
+          "1519814597153": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Siberianhuskyarrow_23_15e876ef-1e51-4796-a259-e6accb479eee.JPG",
+              "overlay_opacity": 15,
+              "title": "",
+              "description": "",
+              "text_align": "text-center",
+              "color": "homepage--white",
+              "link_text": "",
+              "link": "https:\/\/www.instagram.com\/siberianhuskyarrow\/?hl=en",
+              "button_style": "btn btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1519814600459",
+          "1519814597153"
+        ],
+        "settings": {
+          "height": "use_screen_one_half"
+        }
+      },
+      "1519888390542": {
+        "type": "page-banner-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/drogontheamazing_1_da063f73-7d8a-42ff-95e3-d1ed61e426c8.jpeg",
+          "height": "use_screen_two_thirds",
+          "overlay_opacity": 15,
+          "parallax": false,
+          "title": "FUELING ADVENTURES WITH RAW",
+          "description": "WHAT PEAKS WILL YOU AND YOUR PET REACH?",
+          "text_align": "text-center",
+          "color": "homepage--white",
+          "link_text": "",
+          "link": "",
+          "button_style": "btn btn--large btn--clear btn--square uppercase",
+          "button_image": ""
+        }
+      },
+      "1519888933697": {
+        "type": "page-banner-image",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/test-01.jpg",
+          "height": "use_screen_one_half",
+          "overlay_opacity": 15,
+          "parallax": false,
+          "title": "",
+          "description": "",
+          "text_align": "text-center",
+          "color": "homepage--white",
+          "link_text": "",
+          "link": "",
+          "button_style": "btn btn--large btn--clear btn--square uppercase",
+          "button_image": ""
+        }
+      },
+      "page-columns-1": {
+        "type": "page-columns-1",
+        "blocks": {
+          "1519892779080": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-03-01_at_1.27.55_AM.png",
+              "title": "XDREAM DOGS",
+              "text": "<p>Custom Working Dog Gear Made By Working Dog People<\/p>",
+              "button_label": "SHOP NOW",
+              "button_link": "http:\/\/www.xdreamdogs.com\/collars\/"
+            }
+          },
+          "1519892924157": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/28537546_10213791310030442_325444014_n.jpg",
+              "title": "stillwater kennel supply",
+              "text": "<p>Stillwater Kennel Supply is&nbsp;dedicated to&nbsp;offering quality products, at an affordable price. We have built our reputation on customer service being our #1 priority.<\/p>",
+              "button_label": "SHOP NOW",
+              "button_link": "http:\/\/www.stillwaterkennelsupply.com"
+            }
+          },
+          "1519893068098": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-03-01_at_1.33.12_AM.png",
+              "title": "CANNE ATHLETES",
+              "text": "<p>Serious Dogs For Serious People<\/p>",
+              "button_label": "SHOP NOW",
+              "button_link": "https:\/\/www.wearecanineathletes.com"
+            }
+          }
+        },
+        "block_order": [
+          "1519892779080",
+          "1519892924157",
+          "1519893068098"
+        ],
+        "settings": {
+          "title": "PET SUPPLIES",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "password": {
+        "type": "password",
+        "settings": {
+          "logo": "",
+          "image": ""
+        }
+      },
+      "1602535645626": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 80,
+          "html_area": "<!-- -->"
+        }
+      }
+    },
+    "content_for_index": [
+      "1519801410754",
+      "1519522850233",
+      "1519497850216",
+      "index-columns",
+      "1519339143617",
+      "1519455225358",
+      "1519508171879",
+      "1517516629669",
+      "1517381607435",
+      "index-double",
+      "1519456694827",
+      "1519368962815",
+      "1519454533708",
+      "1519888390542",
+      "1519365027971",
+      "1519888933697",
+      "index-blog",
+      "1517522436110",
+      "1602535645626"
+    ]
+  },
+  "presets": {
+    "Bright": {
+      "color_account_bg": "#000000",
+      "color_account_text": "#ffffff",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#333333",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_primary": "#333333",
+      "color_splash": "#1391a4",
+      "color_border": "#cccccc",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#f6f6f6",
+      "product_slideshow_arrows": "#cccccc",
+      "color_footer_bg": "#f2f2f2",
+      "color_footer_text": "#333333",
+      "color_footer_social_link": "#2e3438",
+      "font_title": "google:sansStack:Oswald:400",
+      "font_title_capitalize": true,
+      "font_accent": "google:sansStack:Montserrat:400",
+      "font_body": "google:serifStack:PT+Serif:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "hover",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    },
+    "Dark": {
+      "color_account_bg": "#1d1d1d",
+      "color_account_text": "#afafaf",
+      "color_header_bg": "#000000",
+      "color_header_text": "#ffffff",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_primary": "#000000",
+      "color_splash": "#e73131",
+      "color_border": "#cfcfcf",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#cfcfcf",
+      "product_slideshow_arrows": "#cfcfcf",
+      "color_footer_bg": "#0e0d0d",
+      "color_footer_text": "#ffffff",
+      "color_footer_social_link": "#bebebe",
+      "font_title": "google:sansStack:PT+Mono:400",
+      "font_title_capitalize": false,
+      "font_accent": "google:sansStack:PT+Mono:400",
+      "font_body": "google:sansStack:PT+Mono:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "under",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    },
+    "Light": {
+      "color_account_bg": "#f3f3f3",
+      "color_account_text": "#656565",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#656565",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#656565",
+      "color_primary": "#585e71",
+      "color_splash": "#f4a482",
+      "color_border": "#f7f7f7",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#FFFFFF",
+      "product_slideshow_arrows": "#cccccc",
+      "color_footer_bg": "#ffffff",
+      "color_footer_text": "#656565",
+      "color_footer_social_link": "#a9a9a9",
+      "font_title": "google:sansStack:Megrim:400",
+      "font_title_capitalize": true,
+      "font_accent": "google:sansStack:Questrial:400",
+      "font_body": "google:sansStack:Abel:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "hover",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    }
+  }
+}

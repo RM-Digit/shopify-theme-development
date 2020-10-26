@@ -1,0 +1,330 @@
+<!-- /snippets/product.liquid -->
+{% if product.template_suffix contains "charge-rabbit" %}
+  {% assign form_action = product.metafields.charge_rabbit.subscribe_path %}
+  {% assign form_method = 'get'%}
+  {% assign form_class = "charge-rabbit-product" %}
+  {% assign include_customer_id = true %}
+  {% assign membership_product = true %}
+{% else %}
+  {% assign form_action = '/cart/add' %}
+  {% assign form_method = 'post'%}
+  {% assign form_class= 'product-form' %}
+  {% assign form_id = "AddToCartForm-{{ section.id }" %}
+{% endif %}
+
+<div itemscope itemtype="http://schema.org/Product" class="product-page">
+  <div class="wrapper">
+
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'medium' }}">
+
+    {% if section.settings.product_breadcrumbs %}
+      {% include 'breadcrumb' %}
+    {% endif %}
+
+    {% assign current_variant = product.selected_or_first_available_variant %}
+
+    {%- assign product_image_width = 'large--three-fifths' -%}
+    {%- assign product_description_width = 'large--two-fifths' -%}
+
+    <div class="grid product-single">
+      <div class="grid__item {{ product_image_width }} text-left">
+        <div class="product__slides product-single__photos" id="ProductPhoto-{{ section.id }}">
+          {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+          <div class="product__photo"  data-thumb="{{ featured_image.src | img_url: 'small_cropped' }}">
+            <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}"
+            {% if section.settings.zoom_enable %}data-mfp-src="{{ featured_image | img_url: '2048x2048' }}"{% endif %}
+            data-image-id="{{ featured_image.id }}"
+            class="ProductImg-{{ section.id }}">
+                {% if featured_image.alt contains 'youtube.com' or featured_image.alt contains 'vimeo.com' %}
+              <a href="{{ featured_image.alt }}" class="productVideo product__play icon-fallback-text">
+                <span class="icon icon-play">{% include 'svg-play',  play_color: settings.product_background_color %}</span>
+                <span class="fallback-text">&#9658;</span>
+              </a>
+            {% endif %}
+          </div>
+
+          {% for image in product.images %}
+            {% unless image contains featured_image %}
+              <div class="product__photo{% unless forloop.first == true %} product__photo--additional{% endunless %}"  data-thumb="{{ image.src | img_url: 'small_cropped' }}">
+                <img src="{{ image.src | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}"
+                {% if section.settings.zoom_enable %}data-mfp-src="{{  image.src | img_url: '2048x2048' }}"{% endif %}
+                data-image-id="{{ image.id }}"
+                class="ProductImg-{{ section.id }}">
+                {% if image.alt contains 'youtube.com' or image.alt contains 'vimeo.com' %}
+                  <a href="{{ image.alt }}" class="productVideo product__play icon-fallback-text">
+                    <span class="icon icon-play">{% include 'svg-play', play_color: settings.color_border  %}</span>
+                    <span class="fallback-text">&#9658;</span>
+                  </a>
+                {% endif %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+        <div id="ProductThumbs-{{ section.id }}" class="product__thumbs--square"></div>
+      </div>
+     
+      
+      <h3 itemprop="name" class="h3 product-title">{{ product.title }}</h3>
+          
+      
+      
+
+       <h5><strike><class="small compare-at em" id="ComparePriceWrapper-{{ section.id }}" {% unless current_variant.compare_at_price > current_variant.price %}style="display: none"{% endunless %}>
+            <span class="money"><span id="ComparePrice-{{ section.id }}">{{ product.compare_at_price_max | money }}</span></span>
+         </class></strike></h5>
+
+ <div class="grid__item {{ product_description_width }}" id="productInfo-{{ section.id }}">
+        <div class="text-left">
+          <h5 class="product__price uppercase h4{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+            <span class="money"><span id="ProductPrice-{{ section.id }}">{{ current_variant.price | money }}</span></span>
+          </h5>
+                
+            
+
+          {% if section.settings.product_show_vendor and product.vendor %}
+            <p><a href="{{ product.vendor | url_for_vendor }}" class="border-bottom-link uppercase">{{ product.vendor }}</a></p>
+          {% endif %}
+
+
+          {% comment %}
+            If the product description is over 1000 characters or contains an embed code,
+            place the description in a full width container below the image and cart button.
+          {% endcomment %}
+          
+          {% assign description_position = '' %}
+          {%- assign product_description_content = product.description -%}
+          {%- assign has_tabs = false -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == "tab_description" -%}
+              {%- assign has_tabs = true -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%-if has_tabs -%}
+            {%- assign product_description_content = product_description_content | split: '<h6>' | first -%}
+          {%- endif -%}
+          {% if product_description_content contains '[split]' %}
+            {% assign description_position = 'both' %}
+          {% endif  %}
+
+          <div class="product-description rte" itemprop="description">
+            {{ product_description_content | replace: '<p>[split]</p>', '[split]' | split: '[split]' | first }}
+          </div>
+
+          {% comment %}
+            Optional size chart - controlled by Magnific Popup
+          {% endcomment %}
+          {% if section.settings.info_page != blank %}
+            {% assign size_page = pages[section.settings.info_page] %}
+            <p>
+              <a id="toggleProductModal-{{ section.id }}" class="border-bottom-link uppercase" data-mfp-src="#ProductModal-{{ section.id }}">
+                {{ size_page.title }}
+              </a>
+            </p>
+            <div id="ProductModal-{{ section.id }}" class="product-modal mfp-hide">
+              <div class="rte">{{ size_page.content }}</div>
+            </div>
+          {% endif %}
+
+        </div>
+
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+          <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+          <meta itemprop="price" content="{{ product.selected_or_first_available_variant.price | divided_by: 100 }}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+          <form action="{{ form_action }}" method="{{form_method}}" enctype="multipart/form-data" id="{{form_id}}" data-section="{{ section.id }}" class="product-form-{{ section.id }} {{form_class}}">
+            {% if include_customer_id %}
+              <input type="hidden" name="customer_id" value="{{customer.id}}">
+            {% endif %}
+
+            {% unless product.has_only_default_variant %}
+              {% for option in product.options_with_values %}
+                <div class="selector-wrapper js">
+                  <label for="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}">
+                    {{ option.name }}
+                  </label>
+                  <select class="single-option-selector single-option-selector-{{ section.id }}" id="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}" data-section="{{ section.id }}" data-index="option{{ forloop.index }}">
+                    {% for value in option.values %}
+                      {% assign variant_avialable = true %}
+                      {% if product.options.size == 1 %}
+                        {% unless product.variants[forloop.index0].available  %}
+                          {% assign variant_avialable = false %}
+                        {% endunless %}
+                      {% endif %}
+                      <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}{% unless variant_avialable %} - {{ 'products.product.sold_out' | t }}{% endunless %}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
+            {% endunless %}
+
+            <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+
+            {% assign sold_out = true %}
+            {% if current_variant.available  %}
+  				    {% assign sold_out = false %}
+			      {% endif %}
+            
+            
+            
+
+            
+            
+            
+                            <!-- Code added for Inventory -->            
+             <script>       
+             var inv_qty = {};
+             {% for var in product.variants %}
+               inv_qty[{{- var.id -}}] = {{ var.inventory_quantity | default: 0 }};
+             {% endfor %}
+            </script>            
+            <p class="variant-inventory text-left uppercase"></p>
+<!-- end inventory -->
+            
+            <!-- SG Code to show add to cart message-->
+            <script>
+            $(document).ready(function(){
+                $("#AddToCart-{{ section.id }}").click(function(){
+                    $(".success_cart").fadeIn().delay(3000).fadeOut();
+                });
+
+            });
+            </script>
+             <!-- end script for add to cart message-->
+            
+
+            {% if section.settings.show_quantity and membership_product != true %}
+              <div class="quantity-selector__wrapper text-left" id="Quantity-{{ section.id }}">
+                <label for="Quantity" class="quantity-selector uppercase">{{ 'products.product.quantity' | t }}</label>
+                <span class="left"><input type="number" name="quantity" value="1" min="1" class="QuantityInput">
+                </span></div>
+            {% endif %}
+                       
+                
+            <div class="add-to-cart__wrapper">
+              <button type="submit" name="add" id="AddToCart-{{ section.id }}" class="btn btn--large btn--full btn--clear uppercase addToCart{% if sold_out %} disabled{% endif %}" {% if sold_out %}disabled="true"{% endif %}>
+                <span id="AddToCartText-{{ section.id }}">{% if sold_out %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}</span>
+                <span class="unicode">&#x2022</span>
+                <span class="add-to-cart__price money"><span class="buttonPrice" id="ButtonPrice-{{ section.id }}" data-item-price="{{ current_variant.price }}">{{ current_variant.price | money }}</span></span>
+              </button>
+            </div>
+          </form>
+          <!-- SG Code to show add to cart message-->
+          <div class="success_cart">You successfully added {{ product.title }} to your cart.</div>
+        </div>
+
+
+      {%- if section.blocks.size > 0 and section.settings.tabs_position == 'sidebar'-%}
+          <div class="tabs-wrapper productTabsWrapper">
+            {% include 'product-tabs' %}
+          </div>
+        {%- endif -%}
+
+
+        {% if settings.product_social_enable %}
+          {% capture link %}{{ shop.url }}{{ product.url }}{% endcapture %}
+          {% capture title %}{{ product.title | url_param_escape }}{% endcapture %}
+          <div class="share text-center" data-permalink="{{ link }}">
+            {% if settings.share_enable_facebook %}
+              <a target="_blank" href="//www.facebook.com/sharer.php?u={{ link }}" class="share__link">
+                <span class="icon icon-facebook" aria-hidden="true"></span>
+                <span class="share__text">{{ 'general.share.facebook' | t }}</span>
+              </a>
+            {% endif %}
+            {% if settings.share_enable_twitter %}
+              <a target="_blank" href="//twitter.com/share?url={{ link }}&amp;text={{ shareTitle }}" class="share__link">
+                <span class="icon icon-twitter" aria-hidden="true"></span>
+                <span class="share__text">{{ 'general.share.twitter' | t }}</span>
+              </a>
+            {% endif %}
+            {% if settings.share_enable_pinterest %}
+              <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ link }}&amp;media={{ product.featured_image | product_img_url: '1024x1024' | prepend: 'http:' }}&amp;description={{ shareTitle }}" class="share__link">
+                <span class="icon icon-pinterest" aria-hidden="true"></span>
+                <span class="share__text">{{ 'general.share.pinterest' | t }}</span>
+              </a>
+            {% endif %}
+            {% if settings.share_enable_google %}
+              <a target="_blank" href="//plus.google.com/share?url={{ link }}" class="share__link">
+                <span class="icon icon-google" aria-hidden="true"></span>
+                <span class="share__text">{{ 'general.share.google' | t }}</span>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% comment %}
+          If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
+          in the URL, we can show next/previous links to other products in the collection.
+        {% endcomment %}
+        {% if collection and section.settings.product_nav_enable %}
+          {% if collection.previous_product or collection.next_product %}
+            <p class="product__arrows">
+            {% if collection.previous_product %}
+              {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
+              <span class="left">
+                <a href="{{ prev_url }}" class="btn btn--clear btn--small uppercase" rel="prev">
+                  {{ 'products.general.previous_product_html' | t }}
+                </a>
+              </span>
+            {% endif %}
+
+            {% if collection.next_product %}
+              {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
+              <span class="right">
+                <a href="{{ next_url }}" class="btn btn--clear btn--small uppercase" rel="next">
+                  {{ 'products.general.next_product_html' | t }}
+                </a>
+              </span>
+            {% endif %}
+            </p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if description_position == 'both' %}
+  <div class="wrapper">
+    <div class="product-description--below rte" itemprop="description">
+      {{ product_description_content | replace: '<p>[split]</p>', '[split]' | split: '[split]' | last }}
+    </div>
+  </div>
+{% endif %}
+
+{%- if section.blocks.size > 0 and section.settings.tabs_position == 'below' -%}
+  <div class="wrapper tabs-wrapper productTabsWrapper">
+    {% include 'product-tabs' %}
+  </div>
+{%- endif -%}
+
+{%- if section.settings.product_reviews_enable -%}
+  <div class="wrapper">
+    <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+  </div>
+{%- endif -%}
+
+{% if section.settings.related_products_enable %}
+  {% include 'product-related-items' %}
+{% endif %}
+
+<script type="application/json" id="ProductJson-{{ section.id }}">
+  {{ product | json }}
+</script>
+
+{% if product.template_suffix contains "charge-rabbit" %}
+  {% include 'membership-product-callbacks' %}
+{% endif %}

@@ -1,0 +1,212 @@
+<!-- /templates/cart.liquid -->
+{% comment %}
+
+  This is your /cart template. If you are using the Ajaxify Cart plugin,
+  your form (with action="/cart") layout will be used in the drawer/modal.
+
+  For info on test orders:
+    - General http://docs.shopify.com/manual/your-store/orders/test-orders
+    - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
+
+{% endcomment %}
+{% if cart.item_count > 0 %}
+<div class="wrapper page-margin">
+  <form action="/cart" method="post" novalidate class="cart cartForm">
+    <h3>{{ 'cart.general.title' | t }}</h3>
+<a class="{% if settings.cart_type contains 'page' %}btn btn--clear{% endif %} uppercase" href="/collections/all" title="Continue shopping">Continue shopping</a>
+    <span>&nbsp;&nbsp;</span><a class="{% if settings.cart_type contains 'page' %}btn btn--clear{% endif %} uppercase" href="/cart/clear" title="Empty Cart">Empty Cart</a>
+    <div class="cart__body">
+      <div class="cart__row medium-down--hide cart__header-labels">
+        <div class="grid--full">
+          <div class="grid__item large--one-half push--large--one-half">
+            <div class="grid--full">
+              {% if settings.cart_quantity %}
+                <div class="grid__item one-third medium-down--one-third">
+                  {{ 'cart.label.price' | t }}
+                
+                </div>
+                <div class="grid__item one-third medium-down--one-third text-center">
+                  {{ 'cart.label.quantity' | t }}
+                </div>
+              {% else %}
+                <div class="grid__item two-thirds medium-down--two-thirds"></div>
+              {% endif %}
+              <div class="grid__item one-third medium-down--one-third text-right">
+                {{ 'cart.label.total' | t }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% comment %}
+        Loop through products in the cart
+      {% endcomment %}
+      {% assign cart_weight = 0 %}
+      {% for item in cart.items %}
+      {% assign cart_weight = cart_weight | plus: item.variant.weight %}
+        <div class="cart__row" data-id="{{ item.id }}">
+          <div class="grid--full cart__row--table-large">
+
+            <div class="grid__item large--one-half">
+              <div class="grid--full cart__row--table-large">
+
+                <div class="grid__item one-third">
+                  <a href="{{ item.url | within: collections.all }}" class="cart__image">
+                    <img src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
+                  </a>
+                </div>
+
+                <div class="grid__item two-thirds cart__item__title">
+                  <a href="{{ item.url }}" class="h4--body">
+                    {{ item.product.title }}
+                  </a>
+                  {% unless item.product.has_only_default_variant %}
+                    <p><small>{{ item.variant.title }}</small></p>
+                  {% endunless %}
+
+                  {% if settings.cart_vendor_enable %}
+                    <p>{{ item.vendor }}</p>
+                  {% endif %}
+
+                  {% assign property_size = item.properties | size %}
+                  {% if property_size > 0 %}
+                    {% for p in item.properties %}
+                      {% unless p.last == blank %}
+                        {{ p.first }}:
+
+                        {% comment %}
+                          Check if there was an uploaded file associated
+                        {% endcomment %}
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                        {% else %}
+                          {{ p.last }}
+                        {% endif %}
+
+                        <br>
+                      {% endunless %}
+                    {% endfor %}
+                  {% endif %}
+
+                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove uppercase lighten" data-id="{{ item.id }}">
+                    <small>{{ 'cart.general.remove' | t }}</small>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="grid__item large--one-half">
+              <div class="grid--full cart__row--table-large">
+                {% if settings.cart_quantity %}
+                  <div class="grid__item one-third text-left">
+                    <!--SG code added to show weight of product times number of items in cart to show total lbs per item -->
+                    <span class="h5--body money" style="color: #585858 !important;">{{(item.product.variants.first.weight | times: item.quantity) | weight_with_unit}}&nbsp;&nbsp;</span>
+                    <span class="cart__mini-labels">{{ 'cart.label.price' | t }}</span>
+                    <span class="h5--body money">{{ item.price | money }}</span>
+                  </div>
+
+                  <div class="grid__item one-third text-center">
+                    <span class="cart__mini-labels">{{ 'cart.label.quantity' | t }}</span>
+                    {% comment %}
+                      Added data-id for the ajax cart implementation only.
+                    {% endcomment %}
+                    <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-id="{{ item.id }}" data-submit="true" class="ajaxcart--hide">
+                  </div>
+                {% else %}
+                  <div class="grid__item two-thirds"></div>
+                {% endif %}
+
+                <div class="grid__item one-third text-right">
+                  <span class="cart__mini-labels">{{ 'cart.label.total' | t }}</span>
+                  <span class="h5--body money">{{ item.line_price | money }}</span>
+                </div>
+              </div>
+
+              <div class="ajaxcart__errors hidden errors text-center" id="ajaxcart__item__{{item.id}}__errors">
+                {{ 'cart.general.stockout' | t }}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div class="cart__row cart__footer">
+      <div class="grid">
+        {% comment %}
+          Optional, add a textarea for special notes
+            - Your theme settings can turn this on or off. Default is on.
+            - Make sure you have name="note" for the message to be submitted properly
+        {% endcomment %}
+        <!--Shipping Announcement Header-->
+        
+        
+        
+<p class="cart__footer__text" style="text-align: right;">
+          <span class="cart__subtotal-title uppercase" style="color:#cc0000;"><strong> Total Cart Weight:</strong></span><span class="h3--body cart__subtotal money" style="color:#cc0000; font-size: 16px;">{{ cart.total_weight| weight_with_unit }}</strong></span>
+          <br>
+            <span class="cart__subtotal-title uppercase">{{ 'cart.general.subtotal' | t }}</span>
+            <span class="h3--body cart__subtotal money" style="font-size: 16px;">{{ cart.total_price | money }}</span>
+          </p>
+          <p class="cart__footer__text" style="text-align: right;"><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
+              <div style="padding:30px 30px 30px 30px; margin-bottom:30px;background-color:#e8e8e8;">
+                 <h3 style="text-align:center">
+                   
+                   
+                   PLEASE READ PRIOR TO CHECK OUT<br> 
+                 </h3>
+                 <h6 style="text-align: left; padding-left: 30px">
+                  
+          <strong>SHIPPING</strong>: <span style="color:#cc0000;">All orders are currently being shipped on the closest following MONDAY, even if the order is placed Friday - Sunday.</span> This stands unless otherwise posted. If you need your order RUSHED then it will ship on the next available day according to your transit time. You must add this item to your cart at the time of checkout. 
+                   <br><br>There is no order minimum for shipping, however <u>any orders under 15 pounds do not come with insurance.</u> No exceptions. Extra coolant will not be added to these orders unless you choose to <strong><a href="https://www.primitivechoice.com/products/extra-dry-ice" style="text-decoration: underline;">add extra dry ice</a></strong> to hit 15 pounds. You will pay the same rate to ship 5 pounds vs 15 pounds due to how FedEx bills.<br><br>
+All orders over 15 pounds include shipping insurance and adequate cooling to reflect the season. <br><br>
+The maximum weight per box is 55 pounds. Please do not order 60-70 pounds unless you are prepared to pay an invoice for separate shipping. It is recommended to purchase 56-pound boxes in order to receive the best shipping rate.
+<br><br>
+          <strong>LOCAL</strong>: There is no order minimum or maximum for a local pick-up. Pick-ups take place on Tuesdays and Thursdays from 5-6pm. Please email me to confirm that you'll be there
+                   to pick up your order on your set day and time. If you need a different day, please email me ASAP.<br><br>
+
+                   For more information regarding shipping and pick-up, please visit the <strong><a href="https://www.primitivechoice.com/apps/help-center#!do-you-offer-local-pick-up-1" style="text-decoration: underline;">FAQ</a></strong> page.
+                 
+                 </h6>
+              </div>
+
+
+
+    
+    
+    
+  
+      <!--Shipping Announcement Header End-->
+        {% if settings.cart_notes_enable %}
+          <div class="grid__item large--one-half cart__instructions">
+            <h6 class="cart__instructions__label" for="CartSpecialInstructions" style="text-align:left;">{{ 'cart.general.note' | t }}</h6>
+            <textarea name="note" class="input-full" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+          </div>
+        {% endif %}
+        <div class="grid__item {% if settings.cart_notes_enable %} large--one-half text-right{% endif %}">
+          
+          <input type="submit" name="update" class="btn--secondary update-cart btn--large uppercase" value="{{ 'cart.general.update' | t }}">
+          <span><input type="submit" name="checkout" class="btn uppercase btn--large checkout__button" value="{{ 'cart.general.checkout' | t }}"></span>
+        </div>
+      </div>
+    </div>
+    {% if additional_checkout_buttons and settings.cart_show_additional_buttons %}
+      <div class="grid__item additional-checkout-buttons">
+        {{ content_for_additional_checkout_buttons }}
+      </div>
+    {% endif %}
+  </form>
+</div>
+{% else %}
+  {% comment %}
+    The cart is empty
+  {% endcomment %}
+  <div class="wrapper page-margin text-center">
+    <h3 class="uppercase h3">{{ 'cart.general.title' | t }}</h3>
+    <p>{{ 'cart.general.empty' | t }}</p>
+    <a href="{{ settings.cart_continue_browsing | default: '/collections/all' }}" class="btn btn--large">{{ 'cart.general.continue_browsing_html' | t }}</a>
+  </div>
+{% endif %}
