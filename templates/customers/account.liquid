@@ -33,7 +33,7 @@
   <div class="grid">
 
     <div class="grid__item two-thirds medium-down--one-whole">
-
+      <div id="hulk-app-Reorder-banner"></div>
       <p class="h4--body">{{ 'customer.orders.title' | t }}</p>
 
       {% comment %}
@@ -46,7 +46,7 @@
           <table class="full table--responsive">
             <thead>
               <tr>
-              
+               
                 <th>{{ 'customer.orders.order_number' | t }}</th>
                 <th>{{ 'customer.orders.date' | t }}</th>
                 <th>{{ 'customer.orders.payment_status' | t }}</th>
@@ -57,6 +57,7 @@
             <tbody>
               {% for order in customer.orders %}
                 <tr>
+                  <th><div class="hulk_reorder_button" onclick="Hulkappreorder({{ order.id }})"></div></th>
                   <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
                   <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: format: 'month_day_year' }}</td>
                   <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>

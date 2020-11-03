@@ -133,9 +133,10 @@
         {% endif %}
         {% if section.settings.collection_sorting %}
           <div class="row text-right collection__sort">
+            {% include 'collection-sorting-2' %}
             {% include 'collection-sorting' %}
           </div>
-        {% endif %}
+      {% endif %}
         <hr class="hr--small">
       {% endif %}
       <div class="page-margin grid collection-sidebar">

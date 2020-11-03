@@ -19,7 +19,16 @@
           <a href="{{ link.url }}">{{ link.title }}</a>
           <ul class="collection-nav--child">
             {% for childlink in link.links %}
+              {% if childlink.links != blank %}
               <li {% if childlink.active %}class="collection-nav--active"{% endif %}><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                <ul class="collection-nav--child grandchild">
+                  {% for grandchildlink in childlink.links %}
+                    <li {% if grandchildlink.active %}class="collection-nav--active"{% endif %}><a href="{{ grandchildlink.url }}">{{ grandchildlink.title | escape }}</a></li>       
+                  {% endfor %}
+                </ul>
+              {% else %}
+              <li {% if childlink.active %}class="collection-nav--active"{% endif %}><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>  
+              {% endif %}
             {% endfor %}
           </ul>
         </li>

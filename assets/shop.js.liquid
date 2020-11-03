@@ -1093,7 +1093,8 @@ theme.Product = (function() {
         appendDots: $(this.selectors.productThumbs),
         customPaging: function(slider, i) {
             var thumb = $(slider.$slides[i]).data('thumb');
-            return '<img src="'+thumb+'">';
+            thumb = thumb.replace("_small_cropped","")
+            return '<img src="'+ thumb +'">';
         }
       });
       var selector = this.selectors.productPhoto;

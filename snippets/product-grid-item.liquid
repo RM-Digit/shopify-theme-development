@@ -1,3 +1,16 @@
+{% if product.template_suffix contains "charge-rabbit" %}
+  {% assign form_action = product.metafields.charge_rabbit.subscribe_path %}
+  {% assign form_method = 'get'%}
+  {% assign form_class = "charge-rabbit-product" %}
+  {% assign include_customer_id = true %}
+  {% assign membership_product = true %}
+{% else %}
+  {% assign form_action = '/cart/add' %}
+  {% assign form_method = 'post'%}
+  {% assign form_class= 'product-form' %}
+  {% assign form_id = "AddToCartForm-{{ section.id }" %}
+{% endif %}
+
 {%- assign product_img_url = product.featured_image.src | img_url: '700x' -%}
 {%- if grid_width_large == 'large--one-whole' -%}
   {%- assign product_img_url = product.featured_image.src | img_url: '1200x' -%}
@@ -84,7 +97,15 @@
         {% endif %}
       </p>
     </a>
+    
   </div>
+  <form method="post" action="/cart/add" class="directlycartform{%if sold_out %}{% else %} activecart{% endif %}">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+   
+    <button type="submit" name="add" id="AddToCart-{{ section.id }}" class="btn btn--large btn--full btn--clear uppercase addToCart" >
+      <span id="AddToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+    </button>
+  </form> 
 </div>
   
  

@@ -98,7 +98,7 @@
       {% assign grid_width_medium = 'medium--one-third' %}
       {% assign grid_width_small = 'small--one-half' %}
   {% endcase %}
-
+  
   {% assign counter = 0 %}
   
   {% capture related_items %}
@@ -121,6 +121,16 @@
 
   {% unless related_items == blank %}
   <div class="wrapper product__related">
+    {% comment %}
+   {% for tag in collection.all_tags %}
+      {% if current_tags contains tag %}
+            <li class="active">{{ tag | link_to_remove_tag: tag }}</li>
+      {% else %}
+            <li>{{ tag | link_to_add_tag: tag }}</li>
+      {% endif %}
+    {% endfor %}
+  {% endcomment %}
+    
     <aside class="grid page-margin">
       <div class="grid__item">
         <h3 class="home__subtitle">{{ 'products.general.related' | t }}</h3>

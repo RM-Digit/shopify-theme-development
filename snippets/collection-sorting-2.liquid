@@ -1,0 +1,31 @@
+<!-- /snippets/collection-sorting.liquid -->
+<div class="form-horizontal">
+    <label for="SortBy" class="uppercase">&nbsp;sort:&nbsp;</label>
+    <select name="SortBy2" id="SortBy2" class="uppercase">
+      <option value="/collections/new">New</option>
+      <option value="/collections/in-stock"> In stock</option>
+      <option value="/collections/low-stock">Low stock</option>
+      <option value="/collections/on-sale"> Currently being restocked</option>
+      <option value="/collections/best-sellers-1">Best Sellers</option>
+      <option value="/collections/under-3-per-lb">Under $3 per pound</option>
+      <option value="/collections/primitive-choice-favorites">Primitive Choice Favorites</option>
+    </select>
+  </div>
+  
+  <script>
+    /*============================================================================
+      Inline JS because collection liquid object is only available
+      on collection pages, and not external JS files
+    ==============================================================================*/
+    $(function() {
+        $('#SortBy2').on('change', function() {
+            var home = window.location.href.split(".com")[0] + ".com";
+            var url = $(this).val(); // get selected value
+            localStorage.setItem("sort2_selected",$(this).val());
+            if (url) { // require a URL
+                window.location = home+url; // redirect
+            }
+            return false;
+        });
+    });
+  </script>

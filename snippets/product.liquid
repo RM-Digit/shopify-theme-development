@@ -65,24 +65,15 @@
         <div id="ProductThumbs-{{ section.id }}" class="product__thumbs--square"></div>
       </div>
      
-      
       <h3 itemprop="name" class="h3 product-title">{{ product.title }}</h3>
-          
-      
-      
-
-       <h5><strike><class="small compare-at em" id="ComparePriceWrapper-{{ section.id }}" {% unless current_variant.compare_at_price > current_variant.price %}style="display: none"{% endunless %}>
+       <h5><strike class="small compare-at em" id="ComparePriceWrapper-{{ section.id }}" {% unless current_variant.compare_at_price > current_variant.price %}style="display: none"{% endunless %}>
             <span class="money"><span id="ComparePrice-{{ section.id }}">{{ product.compare_at_price_max | money }}</span></span>
-         </class></strike></h5>
-
+         </strike>
+         <span class="money" style="margin-left: 30px;"><span id="ProductPrice-{{ section.id }}">{{ current_variant.price | money }}</span></span>
+        </h5>
+         
  <div class="grid__item {{ product_description_width }}" id="productInfo-{{ section.id }}">
         <div class="text-left">
-          <h5 class="product__price uppercase h4{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
-            <span class="money"><span id="ProductPrice-{{ section.id }}">{{ current_variant.price | money }}</span></span>
-          </h5>
-                
-            
-
           {% if section.settings.product_show_vendor and product.vendor %}
             <p><a href="{{ product.vendor | url_for_vendor }}" class="border-bottom-link uppercase">{{ product.vendor }}</a></p>
           {% endif %}
